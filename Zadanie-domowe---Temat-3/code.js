@@ -1,16 +1,17 @@
 (function (global) {
 	var mapArray;
-
+	
 	if (!global.UAM) {
 		global.UAM = {};
 	}
-    
+	
     global.UAM.library = []; 
+	
     global.UAM.addCategory = function (newCategoryName) {
 		global.UAM.library.push({
 		categoryName: newCategoryName,
 		books: []
-     });
+     		});
     };
 	
     global.UAM.removeCategory = function (categoryObject) {
@@ -20,6 +21,7 @@
 			}
 		}	
     };
+	
     global.UAM.addBookToCategory = function(categoryObject, title1, count1) {
 		for (i = 0; i < UAM.library.length; i++) { 
 			if (UAM.library[i].categoryName == categoryObject){		
