@@ -1,4 +1,4 @@
-//Ta śmieszna funkcja dodaje tzw. listy, tworzy checkboxa oraz ten drugi śmieszny pliczek
+
 function getTemplate(Obj) {
     return  "<div class='list-row' style=' display: inline-block;'>" + 
 						 Obj + 
@@ -6,7 +6,7 @@ function getTemplate(Obj) {
 				"<input type='checkbox' id='myCheck'>" +
             "<button class='List-remove'>-</div>";
 }
-//Na początku był tu obiekt, ale teraz nie ma znaczenia skoro jest to jeden argument, bezużyteczne na ten moment
+
 function readList() {
  	   var ListValue = document.querySelector('#List');
 	   
@@ -16,45 +16,44 @@ function readList() {
 }
 
 
-//To jest ważne
 window.addEventListener('DOMContentLoaded', function () {
 	
 		var zlicz = 0;
 		var max = 0;
-		 document.getElementById("max").innerHTML = max;	// wypisuje od razu ile jest max elementow
-		  document.getElementById("ilosc").innerHTML = zlicz; // Wypisuje od razu ile jest obecnie zaznaczonych elementow
-		var AddToListBtn = document.querySelector('#AddToList');	// Biere buttona do selectora
+		 document.getElementById("max").innerHTML = max;
+		  document.getElementById("ilosc").innerHTML = zlicz; 
+		var AddToListBtn = document.querySelector('#AddToList');
 		
-	    AddToListBtn.addEventListener('click', function() {	// tworze z tym smiesznym buttonem akcje
+	    AddToListBtn.addEventListener('click', function() {
 			 
 			 
-			   var list = [];	// Bartek, to tworzy tablice
+			   var list = [];	
 			   
-			   var ListValue = document.querySelector('#List').value;	// tutaj pobieram wartosc z pola textowego
+			   var ListValue = document.querySelector('#List').value;
 			
 				var Listlist = document.querySelector('#Listlist');	
 			
-				var template = getTemplate(ListValue);	// Proste przypisanie wartosci z textu do templatki
-				var DomElement = document.createElement('li'); // nie mam pojęcia po co to jest, ale działa więc niech będzie, 
+				var template = getTemplate(ListValue);	
+				var DomElement = document.createElement('li'); 
 				list.push(ListValue);	
 				DomElement.innerHTML = template;	
-				if (ListValue.length > 0)	// sprawdzam czy dlugosc tekstu jest wieksza niz 0
+				if (ListValue.length > 0)	
 				{
 				max++;
-				document.getElementById("max").innerHTML = max;	// po zwiekszeniu wypisuje
-				Listlist.appendChild(DomElement);	// wrzucam cala templatke
+				document.getElementById("max").innerHTML = max;	
+				Listlist.appendChild(DomElement);
 				}
 				
 				
-				var removeBtn = DomElement.querySelector('.List-remove');	//tworzymy buttona z -
+				var removeBtn = DomElement.querySelector('.List-remove');	
 				removeBtn.addEventListener('click', function() {
 				
-					var index = list.indexOf(ListValue);	// pobieram indexa tego elementu ktory sobie zaznacze // chyba
+					var index = list.indexOf(ListValue);	
 					if (index >= 0) {
 						list.splice(index, 1);
 					}
 					
-					Listlist.removeChild(DomElement);	// wiadomo	
+					Listlist.removeChild(DomElement);
 				      max--;
 					 document.getElementById("max").innerHTML = max;	
 					if ( Checkbox.checked && zlicz > 0)	
@@ -65,7 +64,7 @@ window.addEventListener('DOMContentLoaded', function () {
 				
 				});
 				
-				var Checkbox = DomElement.querySelector('#myCheck');	//to samo co wyzej
+				var Checkbox = DomElement.querySelector('#myCheck');	
 				Checkbox.addEventListener('change', function() {
 				if (Checkbox.checked) {
 					zlicz++;
