@@ -1,0 +1,133 @@
+.row {
+    display: block;
+}
+
+
+div>div:first-of-type {
+	float: left;
+	margin:0 auto;
+	position: relative;
+	margin-bottom: 0px;
+}
+
+div>div:first-of-type >h1:first-of-type  {
+	
+	width: 550px;
+	background-color: black;
+	color: white;
+	padding-bottom: 25px;
+	padding-top: 25px;
+	padding-right: 25px;
+	padding-left: 25px;
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+	margin-left: 20px;
+	margin-bottom: 0px;
+	margin-right: 55px;
+	margin-top:0px;
+}
+
+
+div > div:first-of-type > p {
+	
+	width: 550px;
+	margin: 0px;
+	background-color: rgb(211,211,211);
+	padding-bottom: 25px;
+	padding-top: 25px;
+	padding-right: 25px;
+	padding-left: 25px;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	margin-left: 20px;
+	margin-top: 0px;
+	
+}
+
+div>div:first-of-type > p::first-letter {
+	font-size: 250%;
+}
+
+
+div>div:nth-of-type(2) >h1:first-of-type  {
+	font-style:oblique;
+	width: 550px;
+	background-color: orange;
+	color: white;
+	padding-bottom: 25px;
+	padding-top: 25px;
+	padding-right: 29px;
+	padding-left: 25px;
+	margin: 0px;
+	
+}
+
+div>div:nth-of-type(2) >p:first-of-type  {
+
+	width: 550px;
+	margin: 0px;
+	background-color: green;
+	padding-bottom: 27px;
+	padding-top: 27px;
+	padding-right: 27px;
+	padding-left: 27px;
+	color: white;
+
+}
+
+div>div:nth-of-type(2) >p:first-line  {
+	
+text-shadow: 0.3em 0.3em 0.3em white;
+	font-weight: bold ;
+	font-size: 20px;
+
+}
+
+
+
+
+div > div:nth-of-type(2) {
+	box-shadow: 10px 10px 10px Gray   ;
+	width: 604px;
+	border-style: solid;
+	  border-width: 4px;
+	 margin-bottom:55px;
+	float: left;
+		position: relative;
+}
+
+div>div:first-of-type > p::first-letter {
+	font-size: 250%;
+}
+
+div:nth-of-type(2) {
+	
+		position: relative;
+		float: left;
+}
+
+.row > h1 {
+	 text-align: center;
+	 
+}
+
+.row > p:before {
+   background-image: url('cat.jpg');
+    background-size: 40px 40px;
+    display: inline-block;
+    width: 40px; 
+    height: 40px;
+    content:"";
+    
+ text-indent: 50px;
+}
+
+.row > p {
+display:inline-block;
+    width:1219px;
+    white-space: nowrap;
+    overflow:hidden !important;
+    text-overflow: ellipsis;
+ text-indent: 50px;
+}
+
