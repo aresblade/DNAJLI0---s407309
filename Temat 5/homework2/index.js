@@ -2,8 +2,7 @@
 function getTemplate(Obj) {
     return  "<div class='list-row' style=' display: inline-block;'>" + 
 						 Obj + 
-					"</div>" +
-				"<input type='checkbox' id='myCheck'>" +
+					"</div>  " +
             "<button class='List-remove'>-</div>";
 }
 
@@ -18,10 +17,7 @@ function readList() {
 
 window.addEventListener('DOMContentLoaded', function () {
 	
-		var zlicz = 0;
-		var max = 0;
-		 document.getElementById("max").innerHTML = max;
-		  document.getElementById("ilosc").innerHTML = zlicz; 
+
 		var AddToListBtn = document.querySelector('#AddToList');
 		
 	    AddToListBtn.addEventListener('click', function() {
@@ -39,8 +35,7 @@ window.addEventListener('DOMContentLoaded', function () {
 				DomElement.innerHTML = template;	
 				if (ListValue.length > 0)	
 				{
-				max++;
-				document.getElementById("max").innerHTML = max;	
+
 				Listlist.appendChild(DomElement);
 				}
 				
@@ -54,33 +49,9 @@ window.addEventListener('DOMContentLoaded', function () {
 					}
 					
 					Listlist.removeChild(DomElement);
-				      max--;
-					 document.getElementById("max").innerHTML = max;	
-					if ( Checkbox.checked && zlicz > 0)	
-					{
-					 zlicz--;
-					 document.getElementById("ilosc").innerHTML = zlicz;
-					}
+
+
 				
 				});
-				
-				var Checkbox = DomElement.querySelector('#myCheck');	
-				Checkbox.addEventListener('change', function() {
-				if (Checkbox.checked) {
-					zlicz++;
-					document.getElementById("ilosc").innerHTML = zlicz;
-				} else {
-					zlicz--;
-					 document.getElementById("ilosc").innerHTML = zlicz;
-				}
-			});
-		
-		
     });
-	
-
-	
-	
-	
-	
 });
